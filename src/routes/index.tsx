@@ -5,6 +5,7 @@ import {
   Award,
   BadgeCheck,
   Briefcase,
+  FileText,
   GraduationCap,
   Linkedin,
   Mail,
@@ -236,6 +237,22 @@ const PROJECTS = [
     ],
     cta: "View Case Study",
     href: "https://app.notion.com/p/AI-Powered-Money-Management-Case-Study-3408693e70f980368af6e8b937b45fd9?source=copy_link",
+  },
+  {
+    title: "AI Resume Roaster",
+    category: "Generative AI · AI Product · Career Tools",
+    icon: FileText,
+    description:
+      "An AI-powered tool that reviews and \"roasts\" resumes to identify weaknesses, improve clarity, and provide actionable feedback for job seekers.",
+    explored: [
+      "AI-powered resume analysis",
+      "Prompt design",
+      "User experience and feedback loops",
+      "Turning qualitative AI feedback into actionable recommendations",
+      "Rapid prototyping using AI tools",
+    ],
+    cta: "View Project",
+    href: "https://ai.studio/apps/6f864add-dc8f-46c2-803a-8c15f0bb65b3",
   },
 ];
 
