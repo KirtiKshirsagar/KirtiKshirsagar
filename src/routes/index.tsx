@@ -252,7 +252,7 @@ const PROJECTS = [
       "Rapid prototyping using AI tools",
     ],
     cta: "View Project",
-    href: "#",
+    href: "https://ai.studio/apps/6f864add-dc8f-46c2-803a-8c15f0bb65b3",
   },
 ];
 
