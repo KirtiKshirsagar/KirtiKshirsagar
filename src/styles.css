@@ -125,3 +125,43 @@
 @utility text-balance-tight {
   text-wrap: balance;
 }
+
+@utility grid-pattern {
+  background-image:
+    linear-gradient(oklch(0.53 0.2 258 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.53 0.2 258 / 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 75%);
+}
+
+@utility marquee-track {
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.04);
+  }
+}
+
+@utility animate-float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+}
+
+@utility animate-float-slower {
+  animation: float-slow 13s ease-in-out infinite reverse;
+}
