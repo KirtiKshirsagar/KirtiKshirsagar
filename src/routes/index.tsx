@@ -553,7 +553,7 @@ function Portfolio() {
             <div className="mx-auto mt-12 max-w-3xl space-y-8">
               {EXPERIENCE.map((job, jobIndex) => (
                 <Reveal key={job.company} delay={jobIndex * 0.12}>
-                  <article className="group relative overflow-hidden rounded-4xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_24px_48px_-20px_oklch(0.4_0.1_260/0.32)] sm:p-10">
+                  <TiltCard max={4} className="group relative overflow-hidden rounded-4xl border border-border bg-card p-8 hover:border-primary/30 hover:shadow-[0_24px_48px_-20px_oklch(0.4_0.1_260/0.32)] sm:p-10">
                     <span
                       aria-hidden
                       className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 rounded-t-4xl bg-primary transition-transform duration-500 group-hover:scale-x-100"
@@ -587,7 +587,7 @@ function Portfolio() {
                         </li>
                       ))}
                     </ul>
-                  </article>
+                  </TiltCard>
                 </Reveal>
               ))}
             </div>
@@ -605,7 +605,7 @@ function Portfolio() {
             <div className="mt-12 grid gap-5 md:grid-cols-2">
               {SKILL_GROUPS.map((group, groupIndex) => (
                 <Reveal key={group.title} delay={groupIndex * 0.08}>
-                  <div className="h-full rounded-4xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_44px_-20px_oklch(0.4_0.1_260/0.28)] sm:p-8">
+                  <TiltCard max={6} className="h-full rounded-4xl border border-border bg-card p-7 hover:shadow-[0_20px_44px_-20px_oklch(0.4_0.1_260/0.28)] sm:p-8">
                     <div className="flex items-center gap-3">
                       <span className="flex size-10 items-center justify-center rounded-xl bg-accent">
                         <group.icon className="size-5 text-primary" />
@@ -632,7 +632,7 @@ function Portfolio() {
                         </motion.span>
                       ))}
                     </motion.div>
-                  </div>
+                  </TiltCard>
                 </Reveal>
               ))}
             </div>
@@ -724,22 +724,22 @@ function Portfolio() {
                   is email or LinkedIn.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                  <a
+                  <Springy
                     href="mailto:Kshirsagarkirti2@gmail.com"
-                    className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-10px_oklch(0.53_0.2_258/0.6)]"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[0_14px_30px_-10px_oklch(0.53_0.2_258/0.6)]"
                   >
-                    <Mail className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
+                    <Mail className="size-4" />
                     Email me
-                  </a>
-                  <a
+                  </Springy>
+                  <Springy
                     href="https://linkedin.com/in/kirtiks"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary"
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground hover:border-primary/40 hover:text-primary"
                   >
                     <Linkedin className="size-4" />
                     linkedin.com/in/kirtiks
-                  </a>
+                  </Springy>
                 </div>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
                   <span className="inline-flex items-center gap-1.5">
