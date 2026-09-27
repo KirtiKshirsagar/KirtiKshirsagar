@@ -5,6 +5,7 @@ import {
   Award,
   BadgeCheck,
   Briefcase,
+  FileText,
   GraduationCap,
   Linkedin,
   Mail,
@@ -12,6 +13,7 @@ import {
   Phone,
   Sparkles,
   Target,
+  Wallet,
 } from "lucide-react";
 import { CountUp, EASE, motion, Reveal } from "@/components/reveal";
 import { CursorGlow, Springy, TiltCard } from "@/components/interactive";
@@ -108,7 +110,7 @@ const MARQUEE_ITEMS = [
 
 const EXPERIENCE = [
   {
-    role: "Product Manager",
+    role: "Assistant Project Manager",
     company: "FirstCry.com",
     period: "Jun 2022 — Present",
     location: "Pune, India",
@@ -216,6 +218,41 @@ const EDUCATION = [
     school: "Guru Gobind Singh Polytechnic",
     period: "2012 — 2015",
     location: "Nashik",
+  },
+];
+
+const PROJECTS = [
+  {
+    title: "AI-Powered Money Management",
+    category: "AI Product · Fintech · Product Strategy",
+    icon: Wallet,
+    description:
+      "An AI-powered money management product concept designed to help users understand their finances, assess how much they can safely invest, and make more informed investment decisions.",
+    explored: [
+      "Problem definition and user pain points",
+      "Safe-to-Invest decision logic",
+      "AI-powered financial insights",
+      "Product flows and user experience",
+      "Product metrics and success criteria",
+    ],
+    cta: "View Case Study",
+    href: "https://app.notion.com/p/AI-Powered-Money-Management-Case-Study-3408693e70f980368af6e8b937b45fd9?source=copy_link",
+  },
+  {
+    title: "AI Resume Roaster",
+    category: "Generative AI · AI Product · Career Tools",
+    icon: FileText,
+    description:
+      "An AI-powered tool that reviews and \"roasts\" resumes to identify weaknesses, improve clarity, and provide actionable feedback for job seekers.",
+    explored: [
+      "AI-powered resume analysis",
+      "Prompt design",
+      "User experience and feedback loops",
+      "Turning qualitative AI feedback into actionable recommendations",
+      "Rapid prototyping using AI tools",
+    ],
+    cta: "View Project",
+    href: "#",
   },
 ];
 
@@ -535,6 +572,67 @@ function Portfolio() {
                     <p className="mt-1.5 text-xs leading-relaxed text-primary-foreground/60">
                       {metric.detail}
                     </p>
+                  </TiltCard>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Personal Projects */}
+        <section id="projects" className="scroll-mt-20 py-20 sm:py-24">
+          <div className="mx-auto max-w-6xl px-6">
+            <SectionHeading
+              eyebrow="Projects"
+              title="Personal Projects"
+              intro="A few products and experiments I've built independently to explore AI, product thinking, and practical user problems."
+            />
+            <div className="mt-12 grid gap-5 md:grid-cols-2">
+              {PROJECTS.map((project, projectIndex) => (
+                <Reveal key={project.title} delay={projectIndex * 0.12}>
+                  <TiltCard max={5} className="group relative flex h-full flex-col overflow-hidden rounded-4xl border border-border bg-card p-8 hover:border-primary/30 hover:shadow-[0_24px_48px_-20px_oklch(0.4_0.1_260/0.32)] sm:p-9">
+                    <span
+                      aria-hidden
+                      className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 rounded-t-4xl bg-primary transition-transform duration-500 group-hover:scale-x-100"
+                    />
+                    <div className="flex items-center gap-3">
+                      <span className="flex size-11 items-center justify-center rounded-2xl bg-accent transition-transform duration-300 group-hover:scale-110">
+                        <project.icon className="size-5 text-primary" />
+                      </span>
+                      <span className="rounded-full border border-primary/15 bg-accent px-3.5 py-1.5 text-xs font-medium text-accent-foreground">
+                        {project.category}
+                      </span>
+                    </div>
+                    <h3 className="mt-5 font-display text-xl font-bold text-foreground sm:text-2xl">
+                      {project.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      {project.description}
+                    </p>
+                    <p className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                      What I explored
+                    </p>
+                    <ul className="mt-3 space-y-2.5">
+                      {project.explored.map((point) => (
+                        <li key={point} className="flex items-start gap-3">
+                          <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-125" />
+                          <span className="text-sm leading-relaxed text-muted-foreground">
+                            {point}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-auto pt-7">
+                      <Springy
+                        href={project.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[0_10px_24px_-8px_oklch(0.53_0.2_258/0.55)]"
+                      >
+                        {project.cta}
+                        <ArrowUpRight className="size-4" />
+                      </Springy>
+                    </div>
                   </TiltCard>
                 </Reveal>
               ))}
