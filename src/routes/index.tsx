@@ -375,6 +375,14 @@ function Portfolio() {
                     <span className="text-gradient-animated">
                       data, AI, and experimentation.
                     </span>
+                    <motion.span
+                      aria-hidden
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ duration: 0.7, delay: 0.9, ease: EASE }}
+                      className="absolute inset-x-0 bottom-1 -z-10 h-3 origin-left rounded-full bg-primary/20 sm:h-4"
+                    />
+                  </span>
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, y: 40 }}
