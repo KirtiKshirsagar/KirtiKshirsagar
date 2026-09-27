@@ -11,4 +11,4 @@
 
 ## Deployment
 - GitHub Pages deploys via .github/workflows/deploy.yml (bun + static prerender of "/" into .output/public). vite.config.ts enables tanstackStart prerender; the nitro preset stays Lovable's default — don't add a static preset, it breaks the nitro Vite environment build.
-- Repo is KirtiKshirsagar.github.io (user site at domain root), so builds run without a base path.
+- Repo is KirtiKshirsagar/KirtiKshirsagar (project site), so CI builds use --base=/KirtiKshirsagar/; live URL: https://kirtikshirsagar.github.io/KirtiKshirsagar/
