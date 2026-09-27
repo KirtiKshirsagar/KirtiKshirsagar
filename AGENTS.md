@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Deployment
+- GitHub Pages deploys via .github/workflows/deploy.yml (bun + static prerender of "/" into .output/public). vite.config.ts enables tanstackStart prerender; the nitro preset stays Lovable's default — don't add a static preset, it breaks the nitro Vite environment build.
+- Repo is KirtiKshirsagar.github.io (user site at domain root), so builds run without a base path.
