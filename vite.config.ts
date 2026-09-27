@@ -15,7 +15,4 @@ export default defineConfig({
     // produces a fully servable site (see .github/workflows/deploy.yml).
     prerender: { enabled: true, crawlLinks: true },
   },
-  // Static preset is only used outside Lovable builds (local/CI); Lovable's
-  // own publish keeps its pinned Cloudflare preset.
-  nitro: { preset: "static" },
 });
