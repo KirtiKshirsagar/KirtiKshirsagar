@@ -14,6 +14,7 @@ import {
   Target,
 } from "lucide-react";
 import { CountUp, EASE, motion, Reveal } from "@/components/reveal";
+import { CursorGlow, Springy, TiltCard } from "@/components/interactive";
 
 export const Route = createFileRoute("/")({
   head: () => ({

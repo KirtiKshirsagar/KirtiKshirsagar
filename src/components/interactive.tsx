@@ -4,7 +4,7 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
-import { useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { EASE } from "./reveal";
 
 /** Soft blue glow that follows the cursor across the whole page. */
@@ -14,20 +14,20 @@ export function CursorGlow() {
   const sx = useSpring(x, { stiffness: 120, damping: 20, mass: 0.4 });
   const sy = useSpring(y, { stiffness: 120, damping: 20, mass: 0.4 });
 
+  useEffect(() => {
+    const move = (e: PointerEvent) => {
+      x.set(e.clientX);
+      y.set(e.clientY);
+    };
+    window.addEventListener("pointermove", move, { passive: true });
+    return () => window.removeEventListener("pointermove", move);
+  }, [x, y]);
+
   return (
     <motion.div
       aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-0 size-[28rem] rounded-full bg-primary/10 blur-3xl"
+      className="pointer-events-none fixed left-0 top-0 z-[1] size-[28rem] rounded-full bg-primary/10 blur-3xl"
       style={{ x: sx, y: sy, translateX: "-50%", translateY: "-50%" }}
-      onPointerMove={undefined}
-      ref={(node) => {
-        if (!node) return;
-        const move = (e: PointerEvent) => {
-          x.set(e.clientX);
-          y.set(e.clientY);
-        };
-        window.addEventListener("pointermove", move, { passive: true });
-      }}
     />
   );
 }
