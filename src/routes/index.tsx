@@ -110,7 +110,7 @@ const MARQUEE_ITEMS = [
 
 const EXPERIENCE = [
   {
-    role: "Product Manager",
+    role: "Assistant Project Manager",
     company: "FirstCry.com",
     period: "Jun 2022 — Present",
     location: "Pune, India",
