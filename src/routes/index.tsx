@@ -362,7 +362,7 @@ function Portfolio() {
                   className="animate-pulse-ring inline-flex items-center gap-2 rounded-full border border-primary/15 bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary"
                 >
                   <Sparkles className="size-3.5" />
-                  Product Manager · AI &amp; Data Platforms
+                  Product Manager · AI · Fintech · E-commerce
                 </motion.span>
                 <motion.h1
                   initial={{ opacity: 0, y: 48, filter: "blur(8px)" }}
@@ -370,9 +370,11 @@ function Portfolio() {
                   transition={{ duration: 0.9, delay: 0.15, ease: EASE }}
                   className="mt-6 font-display text-4xl font-bold leading-[1.08] text-balance-tight text-foreground sm:text-6xl"
                 >
-                  Building products that turn{" "}
+                  Building products from 0→1 with{" "}
                   <span className="relative inline-block">
-                    <span className="text-gradient-animated">data</span>
+                    <span className="text-gradient-animated">
+                      data, AI, and experimentation.
+                    </span>
                     <motion.span
                       aria-hidden
                       initial={{ scaleX: 0 }}
@@ -380,19 +382,7 @@ function Portfolio() {
                       transition={{ duration: 0.7, delay: 0.9, ease: EASE }}
                       className="absolute inset-x-0 bottom-1 -z-10 h-3 origin-left rounded-full bg-primary/20 sm:h-4"
                     />
-                  </span>{" "}
-                  into{" "}
-                  <span className="relative inline-block">
-                    <span className="text-gradient-animated">growth</span>
-                    <motion.span
-                      aria-hidden
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={{ duration: 0.7, delay: 1.15, ease: EASE }}
-                      className="absolute inset-x-0 bottom-1 -z-10 h-3 origin-left rounded-full bg-primary/20 sm:h-4"
-                    />
                   </span>
-                  .
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, y: 40 }}
@@ -400,11 +390,11 @@ function Portfolio() {
                   transition={{ duration: 0.8, delay: 0.35, ease: EASE }}
                   className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
                 >
-                  5+ years shipping AI-enabled and data-driven products across
-                  ecommerce and enterprise SaaS. I take products from 0→1 —
-                  pricing platforms, GenAI solutions, and experimentation
-                  frameworks that lift conversion, cut costs, and improve the
-                  customer experience.
+                  5+ years of product experience across e-commerce and
+                  fintech, building 0→1 products and improving customer
+                  journeys through data, experimentation, and AI. I work across
+                  product discovery, strategy, analytics, and cross-functional
+                  execution to turn customer problems into measurable outcomes.
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -446,13 +436,6 @@ function Portfolio() {
                     <Mail className="size-4 text-primary" />
                     Kshirsagarkirti2@gmail.com
                   </a>
-                  <a
-                    href="tel:+918329362915"
-                    className="inline-flex items-center gap-1.5 transition-colors hover:text-primary"
-                  >
-                    <Phone className="size-4 text-primary" />
-                    +91 8329362915
-                  </a>
                 </motion.div>
               </div>
 
@@ -469,10 +452,10 @@ function Portfolio() {
                   </p>
                   <ul className="mt-5 space-y-4">
                     {[
-                      "0→1 technical product delivery",
-                      "LLM-powered systems & GenAI",
-                      "Pricing & experimentation platforms",
-                      "Data storytelling with SQL & cohorts",
+                      "0→1 Product Development",
+                      "AI & GenAI Product Exploration",
+                      "Product Analytics & Experimentation",
+                      "SQL, Funnels & Cohort Analysis",
                     ].map((item, i) => (
                       <motion.li
                         key={item}
