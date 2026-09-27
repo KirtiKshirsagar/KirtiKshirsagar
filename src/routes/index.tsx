@@ -567,10 +567,10 @@ function Portfolio() {
           <div className="mx-auto max-w-6xl px-6">
             <SectionHeading
               eyebrow="Projects"
-              title="Personal Projects"
-              intro="A few products and experiments I've built independently to explore AI, product thinking, and practical user problems."
+              title="Personal Project"
+              intro="A product I built independently to explore AI, product thinking, and practical user problems."
             />
-            <div className="mt-12 grid gap-5 md:grid-cols-2">
+            <div className="mt-12 grid gap-5 md:grid-cols-1">
               {PROJECTS.map((project, projectIndex) => (
                 <Reveal key={project.title} delay={projectIndex * 0.12}>
                   <TiltCard max={5} className="group relative flex h-full flex-col overflow-hidden rounded-4xl border border-border bg-card p-8 hover:border-primary/30 hover:shadow-[0_24px_48px_-20px_oklch(0.4_0.1_260/0.32)] sm:p-9">
