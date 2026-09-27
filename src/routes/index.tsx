@@ -385,9 +385,9 @@ function Portfolio() {
                   customer experience.
                 </motion.p>
                 <motion.div
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.3, ease: EASE }}
+                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5, ease: EASE }}
                   className="mt-8 flex flex-wrap items-center gap-3"
                 >
                   <a
@@ -436,9 +436,9 @@ function Portfolio() {
 
               {/* Signature strengths panel */}
               <motion.div
-                initial={{ opacity: 0, y: 32, scale: 0.97 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.25, ease: EASE }}
+                initial={{ opacity: 0, y: 64, scale: 0.9, rotate: 2 }}
+                animate={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+                transition={{ duration: 1, delay: 0.35, ease: EASE }}
                 className="relative"
               >
                 <div className="rounded-4xl border border-border bg-card p-8 shadow-[0_24px_60px_-24px_oklch(0.4_0.1_260/0.25)] transition-transform duration-300 hover:-translate-y-1">
