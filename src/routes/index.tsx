@@ -320,58 +320,62 @@ function Portfolio() {
           <div className="grid-pattern absolute inset-0" aria-hidden />
           <div
             aria-hidden
-            className="animate-float-slow absolute -top-24 right-[8%] size-72 rounded-full bg-primary/15 blur-3xl"
+            className="animate-float-slow absolute -top-24 right-[8%] size-96 rounded-full bg-primary/25 blur-3xl"
           />
           <div
             aria-hidden
-            className="animate-float-slower absolute -bottom-32 left-[4%] size-80 rounded-full bg-primary/10 blur-3xl"
+            className="animate-float-slower absolute -bottom-32 left-[4%] size-96 rounded-full bg-primary/20 blur-3xl"
+          />
+          <div
+            aria-hidden
+            className="animate-float-slow absolute top-1/3 left-1/2 size-64 rounded-full bg-sky-tint-2/70 blur-3xl"
           />
           <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-16 sm:pt-24">
             <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
               <div>
                 <motion.span
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.55, ease: EASE }}
-                  className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary"
+                  initial={{ opacity: 0, y: 32, scale: 0.8 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.7, ease: EASE }}
+                  className="animate-pulse-ring inline-flex items-center gap-2 rounded-full border border-primary/15 bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary"
                 >
                   <Sparkles className="size-3.5" />
                   Product Manager · AI &amp; Data Platforms
                 </motion.span>
                 <motion.h1
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
+                  initial={{ opacity: 0, y: 48, filter: "blur(8px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ duration: 0.9, delay: 0.15, ease: EASE }}
                   className="mt-6 font-display text-4xl font-bold leading-[1.08] text-balance-tight text-foreground sm:text-6xl"
                 >
                   Building products that turn{" "}
-                  <span className="relative inline-block text-primary">
-                    data
+                  <span className="relative inline-block">
+                    <span className="text-gradient-animated">data</span>
                     <motion.span
                       aria-hidden
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
-                      transition={{ duration: 0.6, delay: 0.7, ease: EASE }}
-                      className="absolute inset-x-0 bottom-1 -z-10 h-3 origin-left rounded-full bg-primary/15 sm:h-4"
+                      transition={{ duration: 0.7, delay: 0.9, ease: EASE }}
+                      className="absolute inset-x-0 bottom-1 -z-10 h-3 origin-left rounded-full bg-primary/20 sm:h-4"
                     />
                   </span>{" "}
                   into{" "}
-                  <span className="relative inline-block text-primary">
-                    growth
+                  <span className="relative inline-block">
+                    <span className="text-gradient-animated">growth</span>
                     <motion.span
                       aria-hidden
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
-                      transition={{ duration: 0.6, delay: 0.9, ease: EASE }}
-                      className="absolute inset-x-0 bottom-1 -z-10 h-3 origin-left rounded-full bg-primary/15 sm:h-4"
+                      transition={{ duration: 0.7, delay: 1.15, ease: EASE }}
+                      className="absolute inset-x-0 bottom-1 -z-10 h-3 origin-left rounded-full bg-primary/20 sm:h-4"
                     />
                   </span>
                   .
                 </motion.h1>
                 <motion.p
-                  initial={{ opacity: 0, y: 24 }}
+                  initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.2, ease: EASE }}
+                  transition={{ duration: 0.8, delay: 0.35, ease: EASE }}
                   className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
                 >
                   5+ years shipping AI-enabled and data-driven products across
