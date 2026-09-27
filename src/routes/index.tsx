@@ -443,7 +443,7 @@ function Portfolio() {
                 transition={{ duration: 1, delay: 0.35, ease: EASE }}
                 className="relative"
               >
-                <div className="rounded-4xl border border-border bg-card p-8 shadow-[0_24px_60px_-24px_oklch(0.4_0.1_260/0.25)] transition-transform duration-300 hover:-translate-y-1">
+                <TiltCard className="rounded-4xl border border-border bg-card p-8 shadow-[0_24px_60px_-24px_oklch(0.4_0.1_260/0.25)]">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                     Signature strengths
                   </p>
@@ -482,7 +482,7 @@ function Portfolio() {
                       and cross-functional leadership.”
                     </p>
                   </motion.div>
-                </div>
+              </TiltCard>
               </motion.div>
             </div>
           </div>
@@ -525,7 +525,7 @@ function Portfolio() {
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {METRICS.map((metric, i) => (
                 <Reveal key={metric.label} delay={i * 0.1}>
-                  <div className="group h-full rounded-3xl border border-primary-foreground/10 bg-navy-soft/60 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary-foreground/25 hover:bg-navy-soft">
+                  <TiltCard max={10} className="group h-full rounded-3xl border border-primary-foreground/10 bg-navy-soft/60 p-6 hover:border-primary-foreground/25 hover:bg-navy-soft">
                     <p className="font-display text-4xl font-bold tabular-nums text-primary-foreground">
                       <CountUp to={metric.value} suffix={metric.suffix} />
                     </p>
@@ -535,7 +535,7 @@ function Portfolio() {
                     <p className="mt-1.5 text-xs leading-relaxed text-primary-foreground/60">
                       {metric.detail}
                     </p>
-                  </div>
+                  </TiltCard>
                 </Reveal>
               ))}
             </div>
