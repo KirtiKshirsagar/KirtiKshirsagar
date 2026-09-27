@@ -269,6 +269,7 @@ function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background">
+      <CursorGlow />
       {/* Navigation */}
       <motion.header
         initial={{ y: -64, opacity: 0 }}
@@ -305,13 +306,13 @@ function Portfolio() {
               </a>
             ))}
           </nav>
-          <a
+          <Springy
             href="mailto:Kshirsagarkirti2@gmail.com"
-            className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-8px_oklch(0.53_0.2_258/0.55)] sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[0_10px_24px_-8px_oklch(0.53_0.2_258/0.55)] sm:inline-flex"
           >
             Get in touch
-            <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-          </a>
+            <ArrowUpRight className="size-4" />
+          </Springy>
         </div>
       </motion.header>
 
@@ -391,22 +392,22 @@ function Portfolio() {
                   transition={{ duration: 0.8, delay: 0.5, ease: EASE }}
                   className="mt-8 flex flex-wrap items-center gap-3"
                 >
-                  <a
+                  <Springy
                     href="#experience"
-                    className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-10px_oklch(0.53_0.2_258/0.6)]"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[0_14px_30px_-10px_oklch(0.53_0.2_258/0.6)]"
                   >
                     View experience
-                    <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
-                  <a
+                    <ArrowUpRight className="size-4" />
+                  </Springy>
+                  <Springy
                     href="https://linkedin.com/in/kirtiks"
                     target="_blank"
                     rel="noreferrer"
-                    className="group inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary"
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground hover:border-primary/40 hover:text-primary"
                   >
                     <Linkedin className="size-4" />
                     Connect on LinkedIn
-                  </a>
+                  </Springy>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0 }}
